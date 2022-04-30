@@ -1,0 +1,18 @@
+body {
+  padding-top: 20px;
+  background: #dedede;
+}
+
+.page-wrap {
+  min-height: 100vh;
+}
+
+.btn-top-border {
+  padding-top: 10px;
+}
+
+.section-wrapper {
+  border: #000 solid 3px;
+  border-radius: 15px;
+  padding: 20px;
+}

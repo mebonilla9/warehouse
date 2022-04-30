@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  postgres-warehouse:
+    container_name: postgres-warehouse
+    image: postgres
+    environment:
+      POSTGRES_USER: dbwarehouse
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: warehouse
+      PGDATA: /data/postgres
+    volumes:
+      - postgres-warehouse:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres-warehouse:
